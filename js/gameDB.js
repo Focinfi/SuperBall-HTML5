@@ -1,7 +1,7 @@
 /**
  * Created by focinfi on 14-8-8.
  */
-superBallDB = openDatabase("super_ball_db07", "1.0", "game_score_table", 1024 * 1024 * 5);
+superBallDB = openDatabase("super_ball_db", "1.0", "game_score_table", 1024 * 1024 * 5);
 superBallDB.transaction(function (tx) {
 
     tx.executeSql(
