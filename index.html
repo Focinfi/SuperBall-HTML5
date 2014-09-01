@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SuperBall</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/values.js"></script>
+    <script src="js/gameDB.js"></script>
+    <script src="js/renders.js"></script>
+    <script src="js/checkHit.js"></script>
+    <script src="js/updates.js"></script>
+    <script src="js/support.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<h1 id="game_title" style="text-align: center; display: none">SuperBall</h1>
+<h1 id="game_debug_shower" style="text-align: center; display: block">SuperBall</h1>
+
+<div id="content">
+    <canvas id="super_ball_canvas" width="500" height="500"
+            style="
+                border-top:3px grey solid;
+                border-bottom:1px black solid;
+                border-radius: 10px;
+                display: block;
+                position: relative;
+                margin: 10px auto"></canvas>
+
+    <div id="skills_list">
+        <ul>
+            <li class="skills_li">
+                <div class="skills_logo">↑</div>
+                <div class="skills_animation">
+                    <img src="images/animation_up.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo">→</div>
+                <div class="skills_animation">
+                    <img src="images/animation_right.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo">←</div>
+                <div class="skills_animation">
+                    <img src="images/animation_left.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo"><img src="images/arrow_sown.png"/> </div>
+                <div class="skills_animation">
+                    <img src="images/animation_down.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo">Q</div>
+                <div class="skills_animation">
+                    <img src="images/animation_q.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo">W</div>
+                <div class="skills_animation">
+                    <img src="images/animation_w.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo">E</div>
+                <div class="skills_animation">
+                    <img src="images/animation_e.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo">R</div>
+                <div class="skills_animation">
+                    <img src="images/animation_r.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div id="skills_f" class="skills_logo">F
+                    <div id="skills_f_cooling"></div>
+                </div>
+                <div class="skills_animation">
+                    <img src="images/animation_f.gif"/>
+                </div>
+            </li>
+            <li class="skills_li">
+                <div class="skills_logo">P</div>
+                <div class="skills_animation">
+                    Pause/<br>
+                    Resume
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="score_board">
+        <div id="best_score" class="score_li">
+            Best: <br>
+            <div id="best_game_time" class="best_li">
+                Time:
+            </div>
+            <div id="best_hit_num" class="best_li">
+                Hit:
+            </div>
+        </div>
+        <div id="now_score" class="score_li">Time: 0'0''</div>
+        <div id="hit_blocks_num" class="score_li">Hit: 0</div>
+        <div id="got_bugs_num" class="score_li">Bug: 0</div>
+    </div>
+
+    <!--game skill light-->
+    <div id="skill_light_q" class="skill_light">Q</div>
+    <div id="skill_light_w" class="skill_light">W</div>
+    <!--game shower-->
+    <div id="game_countdown_board">3</div>
+    <div id="game_state_button" class="game_state_shower"
+         onclick="if(gameButtonLock){
+                      gameButtonLock = false;
+                      if(gameState == GAME_BEGINNING){
+                        countDown();
+                        }else{
+                        gameStart();
+                        }
+                    }" >
+        PLAY</div>
+    <div id="game_result_board">
+        <div id="light_rotation"></div>
+        <div id="win_words">WIN</div>
+        <div id="game_score_shower">
+
+            <div id="result_time" class="score_shower_li">Time: 1'23'</div>
+            <div id="result_hit" class="score_shower_li"> Hit: 20</div>
+            <div id="new_bug_num" class="score_shower_li">New Bug: 10</div>
+        </div>
+    </div>
+    <div id="game_boss_dialog" class="game_message_shower game_boss_dialog">Hwa-Hwa</div>
+    <div id="game_message_shower" class="game_message_shower"></div>
+
+</div>
+</body>
+</html>

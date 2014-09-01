@@ -1,0 +1,294 @@
+body{
+    background-color: #f4f4f4;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    -webkit-transform-origin: 50% 50% 0;
+    -moz-transform-origin: 50% 50% 0;
+    -ms-transform-origin: 50% 50% 0;
+    -o-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-family: Arial;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5 auto;
+    padding: 0;
+}
+
+#content{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*left board*/
+#skills_list{
+    background-color: rgba(143,188,143, 0.9);
+    width: 25%;
+    height: 89.7%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border: 3px grey solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    padding: 5%;
+
+    /*transform: skewY(10deg) scale(1.9);*/
+    /*transform: scale(1.9);*/
+
+}
+
+.skills_li{
+    height: 40px;
+    padding-top: 5px;
+    line-height: 100%;
+
+}
+
+.skills_logo{
+    width: 20%;
+    background-color: white;
+    padding: 5%;
+    text-align: center;
+    border: 3px saddlebrown solid;
+    border-radius: 5px;
+    font-size: 20px;
+    float: left;
+    position: relative;
+}
+
+.skills_cooling{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    width: 95%;
+    height: 95%;
+    padding: 5%;
+    text-align: center;
+    line-height: 100%;
+    font-size: 25px;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.skills_logo img{
+    height: 17px;
+}
+
+.skills_animation{
+    line-height: 100%;
+    color: white;
+    padding-left: 40%;
+}
+.skills_animation img{
+    height: 35px;
+    margin-left: 5px;
+    line-height: 100%;
+}
+
+/*right board*/
+#score_board{
+    background-color: rgba(143,188,143, 0.9);
+    width: 29%;
+    height: 93.7%;
+
+    position: absolute;
+    left: 64.5%;
+    top: 0;
+
+    border: 3px grey solid;
+    border-top-right-radius:  10px;
+    border-bottom-right-radius:  10px;
+
+    padding: 3%;
+}
+
+.score_li{
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.best_li{
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0 5px 10px;
+    color: white;
+}
+
+/*game skill light*/
+.skill_light{
+    background-color: white;
+    padding: 2px;
+
+    border-radius: 5px;
+    color: #000000;
+    font-size: 20px;
+
+    position: absolute;
+
+    left: 0;
+    top: 101%;
+
+}
+
+/*game shower*/
+#game_state_button{
+    font-family: Arial;
+    width: 20%;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f77210), color-stop(1, #f9af79));
+    box-shadow: 0px 2px 2px #000000;
+    line-height: 200%;
+    text-align: center;
+
+    border: 5px #4d960d solid;
+    border-radius: 50px;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    left: 40%;
+    top: 60%;
+
+}
+
+.game_message_shower{
+    width: 28.8%;
+    height: 15%;
+    /*background-color: rgba(0,0,0,0.9);*/
+
+    background-image: url('../images/bg_dialog_window.png');
+    line-height: 500%;
+    padding-left: 5px;
+
+    /*border: 2px darkgray solid;*/
+    /*border-radius: 5px;*/
+    text-align: center;
+
+    font-size: 15px;
+    color: #000000;
+
+    -webkit-transform-origin: 0% 100% 0;
+    -moz-transform-origin: 0% 100% 0;
+    -ms-transform-origin: 0% 100% 0;
+    -o-transform-origin: 0% 100% 0;
+    transform-origin: 0% 100% 0;
+
+    position: absolute;
+    top: 82%;
+
+
+    transform: scale(0);
+}
+
+.game_boss_dialog{
+    top: 3%;
+}
+
+#game_countdown_board{
+    font-family: Arial;
+    width: 20%;
+    line-height: 200%;
+    text-align: center;
+
+    color: black;
+    font-size: 50px;
+    font-weight: bolder;
+    position: absolute;
+    left: 40%;
+    top: 45%;
+
+    transform: scale(0);
+}
+
+#game_result_board{
+    position: absolute;
+    left: 0%;
+    top: 20%;
+
+    /*visibility: hidden;*/
+
+
+    visibility: hidden;
+
+
+    -webkit-transform-origin: 0% 100% 0;
+    -moz-transform-origin: 0% 100% 0;
+    -ms-transform-origin: 0% 100% 0;
+    -o-transform-origin: 0% 100% 0;
+    transform-origin: 0% 100% 0;
+
+    transform: skewX(20deg);
+}
+
+#game_score_shower{
+    background-color: beige;
+    width: 200px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 5px saddlebrown solid;
+
+    position: relative;
+
+}
+
+#light_rotation{
+    background-image: url("../images/light.png");
+    background-size: 100%, 100%;
+
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    left: 28%;
+    top:  -10%;
+
+    -webkit-transform-origin: 50% 50% 0;
+    -moz-transform-origin: 50% 50% 0;
+    -ms-transform-origin: 50% 50% 0;
+    -o-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+}
+
+#win_words{
+    font-family: Arial;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+
+    position: relative;
+
+}
+
+.score_shower_li{
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 20px;
+
+}
