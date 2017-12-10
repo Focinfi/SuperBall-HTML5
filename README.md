@@ -3,7 +3,7 @@ SuperBall-HTML5
 
 A simple game using javascript. 
 
-[PLAY NOW !!!](http://superball-html5.coding.io)
+[PLAY NOW !!!](https://superball.focinfi.wang)
 
 [开发总结](http://www.jianshu.com/p/JYLt1P)
 
